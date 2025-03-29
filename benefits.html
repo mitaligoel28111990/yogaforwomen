@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>योग के लाभ महिलाओं के लिए</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .navbar {
+            background: #2c3e50;
+            padding: 15px;
+            color: white;
+            font-size: 20px;
+        }
+        .carousel-container {
+            position: relative;
+            max-width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .carousel img {
+            width: 100%;
+            height: 300px;
+        }
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .prev { left: 10px; }
+        .next { right: 10px; }
+        .dots {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 5px;
+            background-color: gray;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+        .active {
+            background-color: black;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+        h1 { color: #2c3e50; }
+        .benefits {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .card {
+            width: 45%;
+            background: #ecf0f1;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .gallery {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            margin: 10px;
+            border-radius: 8px;
+        }
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+        @media (max-width: 600px) {
+            .card { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <marquee behavior="new data" direction=""></marquee>
+    <div class="navbar">योग के लाभ महिलाओं के लिए</div>
+    <div class="carousel-container">
+        <div class="carousel" id="carousel">
+            <img src="yoga1.jpg" alt="योग मुद्रा">
+            <img src="yoga2.jpg" alt="योग अभ्यास">
+            <img src="yoga3.jpg" alt="योग ध्यान">
+        </div>
+        <button class="prev" onclick="prevSlide()">&#10094;</button>
+        <button class="next" onclick="nextSlide()">&#10095;</button>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(0)"></span>
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+        </div>
+    </div>
+    <div class="container">
+        <h1>योग के लाभ</h1>
+        <div class="benefits">
+            <div class="card">
+                <h2>गृहिणियों के लिए</h2>
+                <ul>
+                    <li>तनाव और चिंता को कम करता है</li>
+                    <li>लचीलापन और मुद्रा में सुधार करता है</li>
+                    <li>ऊर्जा स्तर को बढ़ाता है</li>
+                    <li>मानसिक स्पष्टता और विश्राम को बढ़ावा देता है</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>कामकाजी महिलाओं के लिए</h2>
+                <ul>
+                    <li>काम के तनाव को प्रबंधित करने में मदद करता है</li>
+                    <li>ध्यान और उत्पादकता बढ़ाता है</li>
+                    <li>पीठ और गर्दन के दर्द को कम करता है</li>
+                    <li>समग्र स्वास्थ्य में सुधार करता है</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer">© 2025 योग लाभ | सभी अधिकार सुरक्षित</div>
+    <script>
+        let index = 0;
+        function showSlide(n) {
+            let slides = document.querySelectorAll(".carousel img");
+            let dots = document.querySelectorAll(".dot");
+            if (n >= slides.length) { index = 0; }
+            if (n < 0) { index = slides.length - 1; }
+            let offset = -index * 100 + "%";
+            document.getElementById("carousel").style.transform = "translateX(" + offset + ")";
+            dots.forEach(dot => dot.classList.remove("active"));
+            dots[index].classList.add("active");
+        }
+        function nextSlide() {
+            index++;
+            showSlide(index);
+        }
+        function prevSlide() {
+            index--;
+            showSlide(index);
+        }
+        function currentSlide(n) {
+            index = n;
+            showSlide(index);
+        }
+        setInterval(nextSlide, 3000);
+    </script>
+</body>
+</html>
