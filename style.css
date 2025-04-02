@@ -1,0 +1,208 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Navbar Styles */
+.navbar {
+    background: linear-gradient(45deg, rgb(255, 92, 241),#fFcc00);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+
+}
+.navbar-brand, .navbar-nav a {
+    color: white !important;
+    font-weight: bold;
+}
+.navbar-nav a {
+    padding: 15px 25px;
+    transition: transform 0.3s ease;
+}
+.navbar-nav a:hover {
+    transform: scale(1.1);
+    background-color: rgb(255, 92, 241);
+    border-radius: 30px;
+}
+section a{
+    color: white;
+}
+section:hover a{
+text-decoration: none;
+color: rgb(255, 92, 241);
+font-weight: 600;
+
+}
+/* Get Started Section */
+.get-started-section {
+    background: #333;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+    box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+    padding-bottom: 4vw;
+}
+.get-started-section h2 {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+.get-started-btn {
+    background-color:rgb(255, 92, 241);
+    color: white;
+    padding: 20px 50px;
+    font-size: 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.get-started-btn:hover {
+    transform: scale(1.1);
+    background-color: #fFcc00;
+}
+
+/* Carousel Section */
+.carousel-item img {
+    width: 99.99%;
+    height: 600px;
+     object-fit:full cover ;
+    display:inline;
+}
+.carousel-caption {
+     position: absolute; 
+     color: black;
+   
+     transform: translate(-50%) ;
+      
+
+    font-size: 20px;
+
+
+    font-weight: 50%;
+
+
+    
+}
+
+/* Yoga Videos Section */
+.video-section {
+    padding: 80px 0;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+.watch-learn {
+    font-size: 36px;
+    font-weight: bold;
+    color: rgb(255, 92, 241);
+    margin-bottom: 40px;
+}
+.line {
+
+    width: 50%;
+    margin: 20px 0;
+   margin-left: 25vw;
+   margin-top: 0.5%;
+}
+.video-container {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.video-box {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    margin: 10px;
+}
+.video-box iframe {
+    width: 100%;
+    height: 200px;
+}
+.video-box p {
+    padding: 15px;
+    background-color:rgb(255, 92, 241) ;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+}
+.video-box p {
+    border-bottom: 5px ;
+    background-color:blue ;
+    background-color: black;
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(45deg, rgb(255, 92, 241), #fFcc00);
+    /* color: white; */
+    padding: 20px 0;
+    text-align: center;
+    font-size: 18px;
+    box-shadow: 0 -4px 10px #FF5733;
+    font-weight: 700;
+}
+
+footer a:hover {
+    color: #FF8C66;
+}
+.footer-icons {
+    margin-top: 30px;
+}
+.footer-icons i {
+    font-size: 35px;
+    margin: 0 20px;
+    transition: color 0.3s ease;
+}
+.footer-icons i:hover {
+    color: #FF8C66;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .get-started-btn {
+        padding: 15px 30px;
+        font-size: 18px;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media (max-width: 480px) {
+    .get-started-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .video-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-box {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+h5{
+    font-size: 3vw;
+    font-weight: 5vw;
+}
+p{
+    font-size: 2vw;
+    font-weight: 5vw;
+   padding-left: 12vw;
+   
+}
+.card-body p{
+    text-align: center;
+}
