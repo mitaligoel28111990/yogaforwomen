@@ -16,7 +16,7 @@ body {
 
 }
 .navbar-brand, .navbar-nav a {
-    color: white !important;
+    color: black !important;
     font-weight: bold;
 }
 .navbar-nav a {
